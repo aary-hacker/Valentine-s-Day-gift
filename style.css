@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+
+   padding: 0;
+
+   margin: 0;
+
+   box-sizing: border-box;
+
+   transition: .4s ease-in-out;
+
+ }
+
+ body {
+font-family: Rubik, sans-serif;
+   background: #FFE4EF;
+
+   width: 100%;
+
+   height: 100vh;
+
+   -webkit-tap-highlight-color: transparent;
+
+   transition: .4s ease-in-out;
+
+ }
+
+ button {
+
+   margin: 10px;
+
+   height: 50px;
+
+   width: 70px;
+
+   font-size: 16px;
+
+   border: none;
+
+   border-radius: 10px;
+
+   cursor: pointer;
+
+   transition: .4s ease-in-out;
+
+ }
+
+ #yes:active {
+
+   background: #632D5D;
+
+ }
+
+ #no:active {
+
+   background: #310E25;
+
+ }
+
+ .containar {
+
+   width: 100%;
+
+   height: 100vh;
+
+   justify-content: center;
+
+   display: flex;
+
+   align-items: center;
+
+ }
+
+ #yes {
+
+   background-color: #94418C;
+
+   color: white;
+
+ }
+
+ #no {
+
+   background-color: #4B1639;
+
+   color: white;
+
+ }
+
+ #yay {
+
+   display: none;
+
+   /* مخفي عند البداية */
+
+   position: absolute;
+
+   margin-top: -100px;
+
+   font-weight: 900;
+
+   font-size: 20px;
+
+ }
+
+ #yay1 {
+
+   display: none;
+
+   width: 160px;
+
+   position: absolute;
+
+   margin-top: -250px;
+
+ }
+
+ #can1 {
+
+   width: 100px;
+
+   position: absolute;
+
+   margin-top: -250px;
+
+   display: block;
+
+ }
+
+ #can {
+
+   position: absolute;
+
+   margin-top: -100px;
+
+   font-weight: 600;
+
+   display: block;
+
+ }
+
+img:active {
+
+	transform: scale3d(1.2,1.2,1.2);
+
+}
+
+img{
+  transition: .4s ease-in-out;
+}
+
+
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fae1dd;
+    border-inline-color:  red;
+    
+   
+  }
+ 
+  
+  .container {
+    position: relative;
+  }
+  .valentines {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+  }
+  
+  /* Style the envelope and the card */
+  .envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f08080;
+  }
+  
+  .envelope:before {
+    background-color: #f08080;
+    content: "";
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+  }
+  
+  .card {
+    position: absolute;
+    background-color: #eae2b7;
+    width: 270px;
+    height: 170px;
+    top: 5px;
+    left: 15px;
+    box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    border: 3px solid #003049;
+    border-style: dotted;
+    width: 240px;
+    height: 140px;
+    left: 12px;
+    top: 12px;
+  }
+  
+  .text {
+    position: absolute;
+    font-family:  'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+    top: 19px;
+    left: 85px;
+    color: #003049;
+  }
+  
+  .heart {
+    background-color: #d62828;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 110px;
+    left: 105px;
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: #d62828;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+  .front2 {
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+  }
+  
+  .front2:before {
+    position: absolute;
+    content: "";
+    border-left: 300px solid #f8ad9d;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Add the shadow */
+  .shadow {
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom:200px;
+    left: 650px;
+    animation: scale 3s linear infinite;
+    z-index: -5;
+  }
+  
+  /* To move the envelope up and down */
+  @keyframes up {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  /* to scale the shadow */
+  @keyframes scale {
+    0%,
+    100% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(0.85);
+    }
+  }
+
+
+
+
+
+  .container1 {
+    position: relative;
+  }
+  .valentines1 {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+  }
+  
+  /* Style the envelope and the card */
+  .envelope1 {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f08080;
+  }
+  
+  .envelope1:before {
+    background-color: #f08080;
+    content: "";
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+  }
+  
+  .card1 {
+    position: absolute;
+    background-color: #eae2b7;
+    width: 270px;
+    height: 170px;
+    top: 5px;
+    left: 15px;
+    box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card1:before {
+    content: "";
+    position: absolute;
+    border: 3px solid #003049;
+    border-style: dotted;
+    width: 240px;
+    height: 140px;
+    left: 12px;
+    top: 12px;
+  }
+  
+  .text1 {
+    position: absolute;
+    font-family:  'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+    top: 19px;
+    left: 85px;
+    color: #003049;
+  }
+  
+  .heart1 {
+    background-color: #d62828;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 110px;
+    left: 105px;
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  
+  .heart1:before,
+  .heart1:after {
+    content: "";
+    background-color: #d62828;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart1:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart1:after {
+    left: 15px;
+    top: 0;
+  }
+  .front1 {
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+  }
+  
+  .front1:before {
+    position: absolute;
+    content: "";
+    border-left: 300px solid #f8ad9d;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Add the shadow */
+  .shadow1 {
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom:200px;
+    left: 650px;
+    animation: scale 3s linear infinite;
+    z-index: -5;
+  }
+
+  
+  
+  /* To move the envelope up and down */
+  @keyframes up {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  /* to scale the shadow */
+  @keyframes scale {
+    0%,
+    100% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(0.85);
+    }
+  }
+
+.button_1
+{background-color: #d62828;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 110px;
+  left: 105px;
+  transform: rotate(-45deg);
+  width: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
